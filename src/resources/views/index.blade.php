@@ -39,6 +39,9 @@
             <tr class="shopping-table__row">
 
         </table>
+        <div>
+            <h2></h2>
+        </div>
     </div>
 
 @endsection
