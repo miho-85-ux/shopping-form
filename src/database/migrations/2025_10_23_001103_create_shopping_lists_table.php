@@ -16,8 +16,8 @@ class CreateShoppingListsTable extends Migration
         Schema::create('shopping_lists', function (Blueprint $table) {
             $table->id();
             $table->string('content', 30);
+            $table->integer('quantity')->default(1);
             $table->integer('price')->nullable();
-            $table->integer('number');
             $table->timestamps();
         });
     }

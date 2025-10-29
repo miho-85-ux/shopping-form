@@ -54,7 +54,8 @@
     background-color: #8eeef6;
     color: #fff;
     margin-top: 60px;
-    border: none
+    border: none;
+    font-size: 20px;
 }
 
 .content-checkbox {
