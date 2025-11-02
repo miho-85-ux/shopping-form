@@ -1,6 +1,21 @@
+.shopping__alert--success {
+    width: auto;
+    height: auto;
+    padding: 25px 50px;
+    background-color: #cafcf9;
+    color: #57c1fa;
+}
+
+.shopiing__alert--danger {
+    width: auto;
+    height: auto;
+    padding: 10px 50px;
+    background-color: #fccaca;
+    color: #f71f15;
+}
 .shopping-top {
     width: 1000px;
-    height: 250px;
+    height: 250px; 
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -29,7 +44,7 @@
 
 
 .top-box__title-text {
-    text-align: right;
+    text-align: right; 
 }
 
 .top-box__title-enter {
@@ -67,7 +82,7 @@
     width: 160px;
     height: 20px;
     border: none;
-    text-align: right;
+    text-align: center;
 }
 
 .content-box__item-title {
