@@ -20,4 +20,10 @@ class ShoppingController extends Controller
         return redirect('/')->with('message', '買い物リストを作成しました');
     }
 
+    public function update(ShoppingRequest $request){
+        $shopping = $request->only(['content', 'quantity', 'price']);
+        ShoppingList::find($request->id)->update($shopping);
+        return redirect('/')->with('message', '買い物リストを更新しました');
+    }
+
 }

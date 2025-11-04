@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/', [ShoppingController::class, 'index']);
 
 Route::post('/shopping-lists', [ShoppingController::class, 'store']);
+
+Route::patch('/shopping-lists/update', [ShoppingController::class, 'update']);
