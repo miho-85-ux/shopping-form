@@ -28,11 +28,11 @@
     <div class="shopping-top">
         <div class="top-box">
             <h2 class="top-box__title">買うもの</h2>
-            <input class="top-box__title-enter" name="content" placeholder="入力してください">
+            <input class="top-box__title-enter" name="content" placeholder="入力してください" value="{{ old('content') }}" />
         </div>
         <div class="top-box">
             <h2 class="top-box__titel">個数</h2>
-            <select class="top-box__select-box" name="quantity" id="quantity">
+            <select class="top-box__select-box" name="quantity" id="quantity" value="{{ old('quantity') }}" >
                 @foreach (range(1, 10) as $num)
                 <option value="{{ $num }}">{{ $num }}個</option>
                 @endforeach
@@ -77,6 +77,7 @@
 <form action="/shopping-lists/update" method="POSt">
     @method('PATCH')
     @csrf 
+    <input type="hidden" name="id" value="{{ $shopping['id'] }}">
     <div class="shopping-content">
         <div class="content-box">
             <div class="content-box__item">
@@ -86,7 +87,8 @@
         </div>
         <div class="content-box">
             <div class="content-box__item">
-                <input class="content-text" type="text" name="quantity" value="{{ $shopping->quantity }}個">
+                <input class="content-text" type="text" name="quantity" value="{{ $shopping->quantity }}">
+                個
             </div>
         </div>
         <div class="content-box">
@@ -99,7 +101,11 @@
             <div class="content-box__item">
                 <div class="content-box__button">
                     <button class="content-box__update-button" type="submit">更新</button>
-                    <button class="content-box__delete-button" type="submit">削除</button>
+                    <!-- <button formaction="/shopping-lists/delete" formmethod="POSt" class="content-box__delete-button" type="submit">
+                        @method('DELETE')
+                        @csrf 
+                        削除
+                    </button> -->
                 </div>
             </div>
         </div>
